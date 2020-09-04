@@ -12,9 +12,7 @@ const { extname, dirname } = require('path');
 var app = express();
 
 // view engine setup
-
-
-
+//check again
 app.engine('hbs', exphbs({ defaultLayout: 'main', extname: '.hbs' }));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
