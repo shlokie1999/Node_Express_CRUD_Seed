@@ -22,13 +22,19 @@ router.post('/addUser', function (req, res) {
     fname:req.body.fname,
     lname:req.body.lname,
     email:req.body.email,
-    prof:req.body.fname
+    prof:req.body.prof
   }
 
   console.log(userdata);
-  res.send("data inserted");
+  connection.query("INSERT INTO users SET ?",userdata,function (err, result) {
+
+    if(err) throw err;
+    res.redirect('/');
+    
+  });
+ 
 
   
-})
+});
 
 module.exports = router;
