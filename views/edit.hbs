@@ -1,0 +1,26 @@
+{{#each userdata}}
+
+<form class="form-horizontal" method="post" action="/addUser ">
+      
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" name="email" value="{{this.email}}">
+  </div>
+  <div class="form-group">
+    <label for="pwd">First Name:</label>
+    <input type="First Name" class="form-control" name="fname" value="{{this.fname}}">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Last Name:</label>
+    <input type="First Name" class="form-control" name="lname" value="{{this.lname}}">
+  </div>
+  <div class="form-group">
+    <label for="pwd">Profession:</label>
+    <input type="First Name" class="form-control" name="prof" value="{{this.prof}}">
+  </div>
+  
+  <button type="submit" class="btn btn-primary btn-block">Edit User</button>
+ 
+</form> 
+
+{{/each}}

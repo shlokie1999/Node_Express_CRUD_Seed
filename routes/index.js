@@ -46,4 +46,14 @@ router.get('/deleteUser/:id',function(req, res) {
   
 });
 
+router.get('/editUser/:id',function (req,res) {
+ var userid=req.params.id;
+ connection.query("SELECT * FROM users WHERE id=?",[userid],function (err,rows) {
+  if(err) throw err;
+  res.render('edit',{userdata:rows}); 
+ })
+
+  
+});
+
 module.exports = router;
