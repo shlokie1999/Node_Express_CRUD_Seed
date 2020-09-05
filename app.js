@@ -12,8 +12,8 @@ const { extname, dirname } = require('path');
 var app = express();
 
 // view engine setup
-//check again
-app.engine('hbs', exphbs({ defaultLayout: 'main', extname: '.hbs' }));
+
+app.engine('hbs', exphbs({ defaultLayout: 'layout', extname: '.hbs' }));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
@@ -22,14 +22,6 @@ app.set('view engine', 'hbs');
 // app.set('views', path.join(__dirname, 'views'));
 // app.set('view engine', 'handlebs');
 
-// app.engine('hbs', exphbs({ defaultLayout: 'layout', extname: '.hbs' }));
-
-// app.set('view engine', 'handlebars');
-// app.set('views', path.join(__dirname, 'views/'));
-
-// app.engine('hbs', exphbs({defaultLayout: 'layout', extname: '.hbs'}));
-// app.set('views', path.join(__dirname, 'views/'));
-// app.set('view engine', 'hbs');
 
 app.use(logger('dev'));
 app.use(express.json());
