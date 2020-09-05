@@ -17,4 +17,18 @@ router.get('/', function(req, res, next) {
   
 });
 
+router.post('/addUser', function (req, res) {
+  const userdata = {
+    fname:req.body.fname,
+    lname:req.body.lname,
+    email:req.body.email,
+    prof:req.body.fname
+  }
+
+  console.log(userdata);
+  res.send("data inserted");
+
+  
+})
+
 module.exports = router;
