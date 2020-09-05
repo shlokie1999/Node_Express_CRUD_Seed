@@ -55,11 +55,20 @@
  </thead>
 
  <tbody>
-    <td>Susith</td>
-    <td>Hemathilaka</td>
-    <td>Susith@gmail.com</td>
-    <td>Software Engineer</td>
+
+{{#each users}} 
+
+    <tr>
+
+    <td>{{this.fname}}</td>
+    <td>{{this.lname}}</td>
+    <td>{{this.email}}</td>
+    <td>{{this.prof}}</td>
     <td> <button class="btn btn-primary">Edit</button> <button class="btn btn-primary">Delete</button> </td>
+
+    </tr>
+    {{/each}}
+
  </tbody>
 </table>
       </div>
