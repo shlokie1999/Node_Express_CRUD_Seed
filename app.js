@@ -7,9 +7,10 @@ var logger = require('morgan');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var exphbs = require('express-handlebars');
-const { extname, dirname } = require('path');
+const app = express();
+const port = 8080 //default port =3000 already exposed
 
-var app = express();
+app.listen(port,() => console.log("app listening at port: "+port))
 
 // view engine setup
 
@@ -38,7 +39,7 @@ app.use(function (req, res, next) {
 });
 
 // error handler
-app.use(function (err, req, res, next) {
+app.use(function (err, req, res) {
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};
